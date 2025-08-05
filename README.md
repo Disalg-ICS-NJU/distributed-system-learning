@@ -84,9 +84,16 @@ TLA+(Temporal Logic of Actions)是一种形式化规约语言，用于描述分�
 
 * 相关工具: [Jepsen](https://jepsen.io/)是一个分布式系统测试框架，能够对分布式数据库、消息队列、共识系统等多种分布式系统进行黑盒测试。它专注于通过错误注入和离线分析来验证系统的事务正确性和安全性。它通过模拟诸如网络分区、时钟偏移、节点崩溃等故障，获取系统的执行结果信息，采用一系列检查器对执行历史的正确性进行检验，从而识别潜在的一致性问题。
 
-### 并发与分布式系的确定性模拟测试（Deterministic Simulatioin Testing）
+### 并发与分布式系统的确定性模拟测试（Deterministic Simulatioin Testing）
 
-简介。
+该技术通过操控导致并发与分布式系统不确定性执行的因素：线程/协程调度、随机数、时钟、I/O等，使得系统的执行仅与一个初始的种子有关，从而便于诊断和复现系统深层次的缺陷。
 
-* 工具1
-* 工具2
+相关工具：
+
+* [MadSim](https://github.com/madsim-rs/madsim): 基于Rust tokio运行时的分布式系统确定性模拟测试框架，被[RisingWave](https://github.com/risingwavelabs/risingwave)、[Apache OpenDAL](https://github.com/apache/opendal)等项目使用。
+* [Turmoil](https://github.com/tokio-rs/turmoil): tokio开源的分布式系统确定性模拟测试框架。
+* [Hermit](https://github.com/facebookexperimental/hermit): Meta开源的并发程序确定性模拟执行容器环境。
+
+深入阅读相关博客和工业实践：
+* [Awesome Deterministic Simulation Testing](https://github.com/ivanyu/awesome-deterministic-simulation-testing)
+* [Testing Distributed Systems](https://github.com/asatarin/testing-distributed-systems?tab=readme-ov-file#deterministic-simulation)
