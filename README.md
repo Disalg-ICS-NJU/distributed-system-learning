@@ -2,6 +2,13 @@
 
 本仓库收集了分布式系统学习的相关资料，
 
+## 近期更新
+
+### Specula
+
+面向并发与分布式系统的智能化形式建模与验证工具：[https://github.com/specula-org/Specula](https://github.com/specula-org/Specula)
+> 欢迎关注、试用与反馈
+
 ## 开源课程
 
 ### MIT 6.5840
